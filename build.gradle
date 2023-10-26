@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// Agregar configuración para UTF-8
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+dependencies {
+    //Para realizar pruebas unitarias
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // Selenium Webdriver
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.13.0'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.5.3'
+
+    //Generar datos aleatorios
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+
+    //Para el uso de Cucumber
+    implementation 'io.cucumber:cucumber-java:7.14.0'
+    implementation 'io.cucumber:cucumber-junit:7.14.0'
+
+    //Uso de inyección de dependencias
+    implementation group: 'io.cucumber', name: 'cucumber-picocontainer', version: '7.14.0'
+
+    //Para la generación de reportes con ExtentReports
+    implementation group: 'com.aventstack', name: 'extentreports', version: '5.1.1'
+    implementation group: 'com.vimalselvam', name: 'cucumber-extentsreport', version: '3.1.1'
+}
+
+test {
+    useJUnitPlatform()
+}
