@@ -1,0 +1,22 @@
+{
+  "name": "reportecucumberjava",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "report": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JAlvaro-DiazT/ReporteCucumberJava.git"
+  },
+  "author": "Alvaro Diaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JAlvaro-DiazT/ReporteCucumberJava/issues"
+  },
+  "homepage": "https://github.com/JAlvaro-DiazT/ReporteCucumberJava#readme",
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^3.5.0"
+  }
+}
